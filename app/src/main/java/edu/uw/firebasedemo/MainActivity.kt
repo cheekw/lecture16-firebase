@@ -53,6 +53,10 @@ class MainActivity : AppCompatActivity() {
         //TODO
     }
 
+    fun logoutUser() {
+        //TODO
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
@@ -61,15 +65,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.menu_test ->
+            R.id.menu_test -> {
                 //experiment with database changes
                 true
+            }
             R.id.menu_login -> {
                 loginUser()
                 true
             }
             R.id.menu_logout -> {
-                //logoutUser()
+                logoutUser()
                 true
             }
             else -> super.onOptionsItemSelected(item)
